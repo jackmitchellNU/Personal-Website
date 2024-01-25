@@ -17,7 +17,7 @@ function App() {
         </header>
         <nav>
           <ul>
-            <li className="large-text"><Link to="/homepage">Home</Link></li>
+            <li className="large-text"><Link to="/">Home</Link></li>
             <li className="large-text"><Link to="/about">About Me</Link></li>
             <li className="large-text"><Link to="/skills">Skills</Link></li>
             <li className="large-text"><Link to="/projects">Projects</Link></li>
@@ -25,15 +25,13 @@ function App() {
           </ul>
         </nav>
 
-        <hr />
-
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/homepage" element={<HomePage />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       </div>
     </Router>
   );
