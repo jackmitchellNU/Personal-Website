@@ -1,12 +1,14 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const About = () => {
   return (
-    <section id="about">
+    <Container className="mt-5">
       <h2>About Me</h2>
-      <p>I am a student at Northeastern University pursuing a Bachelor's of Science in Computer Science.</p>
-      {/* Add more details about yourself */}
-    </section>
+      <p>
+        Hi I am Jack Mitchell. I am a Second Year student at Khoury College of Computer Sciences at Northeastern University.  
+      </p>
+    </Container>
   );
 }
 

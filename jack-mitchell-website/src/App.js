@@ -6,6 +6,8 @@ import Skills from './components/Skills.js';
 import Projects from './components/Projects.js';
 import Contact from './components/Contact.js';
 import HomePage from './components/HomePage.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
