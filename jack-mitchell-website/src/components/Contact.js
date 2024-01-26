@@ -12,7 +12,7 @@ const Contact = () => {
 }
 
 export default Contact;
-Testing 123 
+Testing
 **/
 
 import React from 'react';
