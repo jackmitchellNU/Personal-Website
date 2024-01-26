@@ -8,7 +8,7 @@ const HomePage = () => {
         <Col>
           <h1>Welcome to My Personal Website</h1>
           <p>
-            This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+            Nice to meet you!
           </p>
           <Button variant="primary">Learn more</Button>
         </Col>
