@@ -10,11 +10,12 @@ const HomePage = () => {
           <p>
             Nice to meet you!
           </p>
-          <Button variant="primary">Learn more</Button>
         </Col>
       </Row>
     </Container>
   );
 };
+
+// <Button variant="primary">Learn more</Button>
 
 export default HomePage;
