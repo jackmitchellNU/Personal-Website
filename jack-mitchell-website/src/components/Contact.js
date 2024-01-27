@@ -35,13 +35,14 @@ const ContactPage = () => {
           <Form.Control as="textarea" rows={3} name="message" />
         </Form.Group>
 
+        <Form.Group controlId="formBasicName">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter your name" name="from_name" />
+        </Form.Group>
+
         <Button variant="primary" type="submit">
           Submit
         </Button>
-        <Form.Group controlId="formBasicName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter your name" name="from_name" />
-      </Form.Group>
 
       </Form>
     </Container>
