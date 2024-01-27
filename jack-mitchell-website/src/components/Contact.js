@@ -1,31 +1,30 @@
-/**
- * import React from 'react';
-
-const Contact = () => {
-  return (
-    <section id="Contact">
-      <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:mitchell.jack@northeastern.edu?subject=Inquiry&body=Hello%20Jack,%0D%0A%0D%0AI%20am%20interested%20in%20learning%20more%20about%20you!" target="_blank" rel="noopener noreferrer">mitchell.jack@northeastern.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jack-mitchell-a340a6256/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jack-mitchell</a></p>
-    </section>
-  );
-}
-
-export default Contact;
-Testing 123
-**/
-
-import React from 'react';
+import React, { useRef } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
+import emailjs from 'emailjs-com';
 
 const ContactPage = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_h572gtz', 'template_q5vcjoh', form.current, 'rXp_3i2mDaRW8ei4L')
+      .then((result) => {
+          console.log(result.text);
+          alert('Message sent successfully!');
+      }, (error) => {
+          console.log(error.text);
+          alert('Failed to send the message, please try again.');
+      });
+  };
+
   return (
     <Container className="mt-5">
       <h2>Contact Me</h2>
-      <Form>
+      <Form ref={form} onSubmit={sendEmail}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control type="email" placeholder="Enter email" name="user_email" />
           <Form.Text className="text-muted">
             I'll never share your email with anyone else.
           </Form.Text>
@@ -33,12 +32,17 @@ const ContactPage = () => {
 
         <Form.Group controlId="formBasicMessage">
           <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea" rows={3} />
+          <Form.Control as="textarea" rows={3} name="message" />
         </Form.Group>
 
         <Button variant="primary" type="submit">
           Submit
         </Button>
+        <Form.Group controlId="formBasicName">
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="text" placeholder="Enter your name" name="from_name" />
+      </Form.Group>
+
       </Form>
     </Container>
   );
