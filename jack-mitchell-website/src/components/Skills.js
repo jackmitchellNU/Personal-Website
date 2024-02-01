@@ -2,32 +2,50 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <section id="skills">
-      <h2>Skills</h2>
-      <p className="large-text"><b>Languages</b></p>
-        <ul>
-          <li>Java</li>
-          <li>Kotlin</li>
-          <li>Python</li>
-          <li>C++</li>
-          <li>C</li>
-          <li>JavaScript/Typescript</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
+    <section id="skills" className="container my-5">
+      <h2 className="text-center mb-4">Skills</h2>
+      
+      <div className="mb-4">
+        <h3 className="h5 mb-3"><b>Languages</b></h3>
+        <div className="mb-3">
+          <h4 className="h6 mb-2">Proficient</h4>
+          <ul className="list-group">
+            <li className="list-group-item">Java</li>
+            <li className="list-group-item">C++</li>
+            <li className="list-group-item">Kotlin</li>
+          </ul>
+        </div>
+
+        <div className="mb-3">
+          <h4 className="h6 mb-2">Familiar With</h4>
+          <ul className="list-group">
+            <li className="list-group-item">Python</li>
+            <li className="list-group-item">C</li>
+            <li className="list-group-item">JavaScript/Typescript</li>
+            <li className="list-group-item">HTML5</li>
+            <li className="list-group-item">CSS3</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mb-4">
+        <h3 className="h5 mb-3"><b>Frameworks/Tools</b></h3>
+        <ul className="list-group">
+          <li className="list-group-item">JUnit</li>
+          <li className="list-group-item">JavaFX</li>
+          <li className="list-group-item">Visual Studio</li>
+          <li className="list-group-item">JetBrains IDEs</li>
         </ul>
-        <p className="large-text"><b>Frameworks/Tools</b></p>
-        <ul>
-          <li>JUnit</li>
-          <li>JavaFX</li>
-          <li>Visual Studio</li>
-          <li>JetBrains IDEs</li>
+      </div>
+
+      <div className="mb-4">
+        <h3 className="h5 mb-3"><b>OS</b></h3>
+        <ul className="list-group">
+          <li className="list-group-item">Mac OS - OSX</li>
+          <li className="list-group-item">Windows</li>
+          <li className="list-group-item">Ubuntu Linux</li>
         </ul>
-        <p className="large-text"><b>OS</b></p>
-        <ul>
-          <li>Mac OS - OSX</li>
-          <li>Windows</li>
-          <li>Ubuntu Linux</li>
-        </ul>
+      </div>
     </section>
   );
 }
